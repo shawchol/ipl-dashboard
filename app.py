@@ -28,8 +28,8 @@ st.markdown("""
 # ── Load Data ────────────────────────────────────────────────────
 @st.cache_data
 def load_data():
-    matches = pd.read_csv("data/matches.csv")
-    deliveries = pd.read_csv("data/deliveries.csv")
+    matches = pd.read_csv("matches.csv")
+deliveries = pd.read_csv("compressed_data.csv.gz", compression="gzip")
     return matches, deliveries
 
 matches, deliveries = load_data()
